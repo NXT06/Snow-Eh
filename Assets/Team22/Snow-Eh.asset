@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24fbde2c24ab1544bd81b52842e8ec5, type: 3}
+  m_Name: Snow-Eh
+  m_EditorClassIdentifier: 
+  includeInRandomizer: 1
+  teamNumber: 0
+  gameTitle: Snow, Eh!
+  gameIcon: {fileID: 0}
+  prompt: 
+  singlePlayerScene: {fileID: 0}
+  twoPlayerScene: {fileID: 102900000, guid: 3437194ad32224e4194b2ecaae148eaa, type: 3}
+  controls: []
+  rightPlayerAltControls: []
+  singlePlayerScenePath: 
+  twoPlayerScenePath: Assets/Team22/Scenes/Snow-Eh.unity
+  postgameMessages: []
+  bannerImage: {fileID: 0}
+  developerCredits: []
+  licensedWorksCredits: []
