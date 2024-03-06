@@ -8,7 +8,6 @@ namespace team22
 {
     public class PlayerController : MicrogameInputEvents
     {
-        [Header("Movement Values")]
         Vector2 currentSpeed = Vector2.zero;
         public float AccelerationTime = 1.5f;
         public float DecelerationTime = 5f;
@@ -28,14 +27,9 @@ namespace team22
 
         Vector2 direction;
 
-        void Start()
-        {
-            // get the direction of the joystick
-            direction = stick.normalized;
-        }
-
         void Update()
         {
+            direction = stick.normalized;
             Move();
         }
 
