@@ -11887,9 +11887,8 @@ MonoBehaviour:
   getInputFrom: 0
   movement: {x: 0, y: 0}
   snowOnShovel: {fileID: 1776609557}
-  snowBall: {fileID: 3878181739833481754, guid: 7405c02273b00514daf6c490f445d2e5, type: 3}
+  snowBall: {fileID: 4614238264699174325, guid: f5719a753457d7d449f51262e25f947d, type: 3}
   snow: 0
-  pos: {fileID: 0}
 --- !u!212 &828595302
 SpriteRenderer:
   m_ObjectHideFlags: 0
