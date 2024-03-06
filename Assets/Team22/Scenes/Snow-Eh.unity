@@ -22833,6 +22833,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4345177414627294556, guid: 44dfee2e106198844b3e9fc48f15b8fe, type: 3}
+      propertyPath: walkingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cc7bbbca3ca06364594120df571d5e66, type: 3}
     - target: {fileID: 6049738895493298111, guid: 44dfee2e106198844b3e9fc48f15b8fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5507848

@@ -170,6 +170,7 @@ MonoBehaviour:
   lowerBound: -4
   leftBound: -5
   rightBound: -0.8
+  walkingSound: {fileID: 8300000, guid: cc7bbbca3ca06364594120df571d5e66, type: 3}
 --- !u!1 &205290967006432873
 GameObject:
   m_ObjectHideFlags: 0
