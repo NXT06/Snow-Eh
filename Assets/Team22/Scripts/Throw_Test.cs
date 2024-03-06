@@ -26,6 +26,8 @@ public class ThrowTest : MonoBehaviour
 
     Vector3 movement;
 
+    [SerializeField] public AudioClip snowballImpactSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -66,6 +68,8 @@ public class ThrowTest : MonoBehaviour
            
            
             Destroy(gameObject);
+
+            AudioSource.PlayClipAtPoint(snowballImpactSound, transform.position, 10f);
             
        }
 

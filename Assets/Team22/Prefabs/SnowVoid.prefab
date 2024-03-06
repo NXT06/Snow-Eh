@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48337a0f10fd15a4cbe92703bfd02dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallScale: {x: 0.66, y: 0.66, z: 0.66}
-  peakScale: {x: 0.86, y: 0.86, z: 0.86}
+  smallScale: {x: 0.76, y: 0.76, z: 0.76}
+  peakScale: {x: 1.5, y: 1.5, z: 1.5}
   interpolation1: 0
   curve1:
     serializedVersion: 2
@@ -180,3 +180,4 @@ MonoBehaviour:
   snowball: {fileID: 3492261960209800254, guid: e946dcb12963d7f4984d0c71fa38fcd6, type: 3}
   lerpTimerPos: 0
   lerpTimerScale: 0
+  snowballImpactSound: {fileID: 8300000, guid: 81e47dfe9d4b3e740a6efcb4133c5d88, type: 3}

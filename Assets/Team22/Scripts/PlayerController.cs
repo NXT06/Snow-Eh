@@ -27,6 +27,9 @@ namespace team22
 
         Vector2 direction;
 
+
+        [SerializeField] public AudioClip walkingSound;
+
         void Update()
         {
             direction = stick.normalized;
@@ -45,11 +48,15 @@ namespace team22
 
                 RotationCalculations();
 
+                
+
             }
             // if there is no input
             else
             {
                 
+                AudioSource.PlayClipAtPoint(walkingSound, transform.position, 10f);
+
                 // application of friction/deceleration depending on the stored direction
                 if (currentSpeed.x > 0) // for moving right
                 {

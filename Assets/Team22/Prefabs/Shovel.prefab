@@ -108,6 +108,12 @@ MonoBehaviour:
   snowOnShovel: {fileID: 1329071547802160817}
   snowBall: {fileID: 4614238264699174325, guid: f5719a753457d7d449f51262e25f947d, type: 3}
   snow: 0
+  snowThrowSoundList:
+  - {fileID: 8300000, guid: 997e4890f3e84ab4f8b6f74bfee8292a, type: 3}
+  - {fileID: 8300000, guid: 7d8d695333086794bb3d788c86cd2171, type: 3}
+  - {fileID: 8300000, guid: 63b3e4b8c43d7fb46ac58413fb5765e5, type: 3}
+  - {fileID: 8300000, guid: 85929d8506cfb2f48a60c4a50e9f02f6, type: 3}
+  - {fileID: 8300000, guid: f140dbaa0555610438e7855e7249a875, type: 3}
 --- !u!50 &7226173346362344672
 Rigidbody2D:
   serializedVersion: 4
