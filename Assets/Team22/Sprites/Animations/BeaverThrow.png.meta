@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BeaverThrow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 1280
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d01225791e63f41a25eed71bbe6d1a
+      internalID: -1749966135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeaverThrow_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2
+        width: 1280
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d4ee4b5d280a9488d24304c0bfd237
+      internalID: 1438433765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeaverThrow_2
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2
+        width: 1280
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23f4f86a6690aa44bb1c19c4f0482ea
+      internalID: 1156832022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeaverThrow_3
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2
+        width: 1280
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029000323c8b9f740b3adaee00bf1440
+      internalID: -1494771125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +229,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BeaverThrow_0: -1749966135
+      BeaverThrow_1: 1438433765
+      BeaverThrow_2: 1156832022
+      BeaverThrow_3: -1494771125
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
