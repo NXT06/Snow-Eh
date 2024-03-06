@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using team22;
 using UnityEngine.InputSystem.iOS;
+using UnityEngine.InputSystem;
 
 namespace team22
 {
@@ -105,6 +106,11 @@ namespace team22
                 // cancel deceleration
                 currentSpeed.y = 0;
             }
+        }
+
+        protected override void OnButton1Released(InputAction.CallbackContext context)
+        {
+            // run anything in this function when the 1st button is pressed
         }
 
     }
