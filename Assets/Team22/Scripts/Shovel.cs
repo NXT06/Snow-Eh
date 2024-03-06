@@ -13,7 +13,7 @@ public class Shovel : MicrogameInputEvents
     Rigidbody2D rb;
     float speed = 3;
     
-    public static float startPos; 
+    public static Vector2 startPos; 
     
     public static int snowSize; 
     // Start is called before the first frame update
@@ -27,12 +27,15 @@ public class Shovel : MicrogameInputEvents
     // Update is called once per frame
     void Update()
     {
-        
+       
         if (snowSize > 9)
         {
+            
+            startPos.x = transform.position.x;
+            startPos.y = transform.position.y;
             Instantiate(snowBall, transform.position, transform.rotation);
             snowSize = 2;
-            startPos = transform.position.x;
+            
         }
         
 

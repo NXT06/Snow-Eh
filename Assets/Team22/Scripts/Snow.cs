@@ -21,7 +21,7 @@ public class Snow : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && Shovel.snowSize < 10)
         {
             Shovel.snowSize += weight;
-            Debug.Log(Shovel.snowSize); 
+             
             Destroy(gameObject);
         }
     }

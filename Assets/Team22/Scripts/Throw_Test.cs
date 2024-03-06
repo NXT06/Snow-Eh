@@ -11,7 +11,7 @@ public class ThrowTest : MonoBehaviour
     public Vector3 peakScale;
     public float interpolation1;
     public AnimationCurve curve1;
-    float explode; 
+    Vector2 explode; 
 
     Vector3 endPosition;
     public float interpolation2;
@@ -21,13 +21,16 @@ public class ThrowTest : MonoBehaviour
 
     public float lerpTimerPos;
     public float lerpTimerScale;
-    bool canExplode; 
+    bool canExplode;
+    Vector2 startPos; 
 
     void Start()
     {
         endPosition = transform.position;
         endPosition.x += 10;
-        canExplode = true; 
+        canExplode = true;
+        startPos.x = Shovel.startPos.x;
+        startPos.y = Shovel.startPos.y; 
     }
 
     void Update()
@@ -49,18 +52,18 @@ public class ThrowTest : MonoBehaviour
 
             lerpTimerPos += Time.deltaTime * 0.1f;
 
-        if (canExplode)
-        {
-            explode = Shovel.startPos + transform.position.x;
-            Debug.Log(explode);
-        }
 
-        if (explode >  4f || explode < -4f && canExplode == true)
+
+        Debug.Log(startPos.x + 5f);
+            
+        
+
+        if (transform.position.x > startPos.x + 5f || transform.position.x > startPos.y + 6f) 
         {
 
             Instantiate(snowball, transform.position, transform.rotation);
-           Shovel.startPos = 0;
-            canExplode = false;
+           
+           
             Destroy(gameObject);
             
        }
