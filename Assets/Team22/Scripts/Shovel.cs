@@ -29,7 +29,7 @@ public class Shovel : MicrogameInputEvents
     void Update()
     {
        
-        if (snowSize > 20)
+        if (snowSize > 9)
         {
             
             startPos.x = transform.position.x;

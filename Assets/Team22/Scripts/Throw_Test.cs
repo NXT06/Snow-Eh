@@ -58,8 +58,8 @@ public class ThrowTest : MonoBehaviour
             
         
 
-        if (transform.position.x > startPos.x + 5f || transform.position.y > startPos.y + 5f || transform.position.x < startPos.x - 5f || transform.position.y < startPos.y - 5)
-            
+        if (transform.position.x > startPos.x + 8f || transform.position.y > startPos.y + 8f || transform.position.x < startPos.x - 8f || transform.position.y < startPos.y - 8
+        || transform.position.x > 5 || transform.position.y > 3 || transform.position.x < -5 || transform.position.y < -3.0)
         {
 
             Instantiate(snowball, transform.position, transform.rotation);
@@ -69,9 +69,14 @@ public class ThrowTest : MonoBehaviour
             
        }
 
-        
+    
+       
 
         
 
     }
+
+    
+    
+
 }
