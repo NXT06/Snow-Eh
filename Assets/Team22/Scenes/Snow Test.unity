@@ -11865,6 +11865,7 @@ GameObject:
   - component: {fileID: 828595301}
   - component: {fileID: 828595305}
   - component: {fileID: 828595304}
+  - component: {fileID: 828595306}
   m_Layer: 0
   m_Name: Shovel
   m_TagString: Player
@@ -12031,6 +12032,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &828595306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828595300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5f3c49824d70448212e2e95fb70eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getInputFrom: 0
+  AccelerationTime: 1.5
+  DecelerationTime: 0.5
+  MaxSpeed: 3
+  RotationSpeed: 270
 --- !u!1001 &829415136
 PrefabInstance:
   m_ObjectHideFlags: 0

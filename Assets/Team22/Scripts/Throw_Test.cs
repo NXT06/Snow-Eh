@@ -17,16 +17,19 @@ public class ThrowTest : MonoBehaviour
     public float interpolation2;
     public AnimationCurve curve2;
 
-    public GameObject snowball; 
-
+    public GameObject snowball;
+    Rigidbody2D rb; 
     public float lerpTimerPos;
     public float lerpTimerScale;
     bool canExplode;
     Vector2 startPos; 
 
+    Vector3 movement;
+
     void Start()
     {
-        endPosition = transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        endPosition = transform.position + movement;
         endPosition.x += 10;
         canExplode = true;
         startPos.x = Shovel.startPos.x;
@@ -37,8 +40,8 @@ public class ThrowTest : MonoBehaviour
     {
         
             lerp = true;
-        
-        
+
+        rb.AddForce(transform.up * 20);
        
         
             
@@ -47,18 +50,16 @@ public class ThrowTest : MonoBehaviour
 
             lerpTimerScale += Time.deltaTime * 0.7f;
             
-            interpolation2 = curve2.Evaluate(lerpTimerPos);
-            transform.position = Vector3.Lerp(transform.position, endPosition, interpolation2);
-
-            lerpTimerPos += Time.deltaTime * 0.1f;
+            
 
 
 
-        Debug.Log(startPos.x + 5f);
+        
             
         
 
-        if (transform.position.x > startPos.x + 5f || transform.position.x > startPos.y + 6f) 
+        if (transform.position.x > startPos.x + 5f || transform.position.y > startPos.y + 5f || transform.position.x < startPos.x - 5f || transform.position.y < startPos.y - 5)
+            
         {
 
             Instantiate(snowball, transform.position, transform.rotation);
