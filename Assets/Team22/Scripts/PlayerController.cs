@@ -8,22 +8,21 @@ namespace team22
 {
     public class PlayerController : MicrogameInputEvents
     {
+        // movement variables
         Vector2 currentSpeed = Vector2.zero;
         public float AccelerationTime = 1.5f;
         public float DecelerationTime = 5f;
         public float MaxSpeed = 7f;
-        public float RotationSpeed = 360;
+        public float RotationSpeed = 360f;
+
+        // boundary variables
+        public float upperBound = 1;
+        public float lowerBound = -1;
+        public float leftBound = -1;
+        public float rightBound = 1;
 
         // joystick directions
-        Vector2 idle = new Vector2(0f, 0f);
-        Vector2 up = new Vector2(0f, 1f);
-        Vector2 upRight = new Vector2(0.7f, 0.7f);
-        Vector2 right = new Vector2(1f, 0f);
-        Vector2 downRight = new Vector2(0.7f, -0.7f);
-        Vector2 down = new Vector2(0f, -1f);
-        Vector2 downLeft = new Vector2(-0.7f, -0.7f);
-        Vector2 left = new Vector2(-1f, 0f);
-        Vector2 upLeft = new Vector2(-0.7f, 0.7f);
+        Vector2 idle = Vector2.zero;
 
         Vector2 direction;
 
@@ -31,6 +30,7 @@ namespace team22
         {
             direction = stick.normalized;
             Move();
+            PlayerBounds();
         }
 
         public void Move()
@@ -48,6 +48,7 @@ namespace team22
             // if there is no input
             else
             {
+                
                 // application of friction/deceleration depending on the stored direction
                 if (currentSpeed.x > 0) // for moving right
                 {
@@ -65,6 +66,7 @@ namespace team22
                 {
                     currentSpeed.y = Mathf.Clamp(currentSpeed.y + (MaxSpeed / DecelerationTime) * Time.deltaTime, -MaxSpeed, 0);
                 }
+                
             }
 
             // Update the transform of the player
@@ -80,5 +82,30 @@ namespace team22
             // update the rotation of this object
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotationSpeed * Time.deltaTime);
         }
+
+        public void PlayerBounds()
+        {
+            
+            // clamp calculations
+            float verticalClamp = Mathf.Clamp(transform.position.y, lowerBound, upperBound);
+            float horizontalClamp = Mathf.Clamp(transform.position.x, leftBound, rightBound);
+
+            // apply these bounds
+            transform.position = new Vector3(horizontalClamp, verticalClamp, transform.position.z);
+
+            // if the left or right bound is reached
+            if (transform.position.x >= rightBound || transform.position.x <= leftBound)
+            {
+                // cancel deceleration
+                currentSpeed.x = 0;
+            }
+            // if the upper or lower bound is reached
+            if (transform.position.y >= upperBound || transform.position.y <= lowerBound)
+            {
+                // cancel deceleration
+                currentSpeed.y = 0;
+            }
+        }
+
     }
 }
