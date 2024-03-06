@@ -8,10 +8,15 @@ namespace team22
 {
     public class PlayerController : MicrogameInputEvents
     {
+        [Header("Movement Values")]
         Vector2 currentSpeed = Vector2.zero;
-        public float acceleration = 1500f;
-        public float rotateSpeed = 90;
+        public float AccelerationTime = 1.5f;
+        public float DecelerationTime = 5f;
+        public float MaxSpeed = 7f;
+        public float RotationSpeed = 360;
 
+        // joystick directions
+        Vector2 idle = new Vector2(0f, 0f);
         Vector2 up = new Vector2(0f, 1f);
         Vector2 upRight = new Vector2(0.7f, 0.7f);
         Vector2 right = new Vector2(1f, 0f);
@@ -21,63 +26,65 @@ namespace team22
         Vector2 left = new Vector2(-1f, 0f);
         Vector2 upLeft = new Vector2(-0.7f, 0.7f);
 
-        Rigidbody2D body;
+        Vector2 direction;
 
-        // Start is called before the first frame update
         void Start()
         {
-            body = GetComponent<Rigidbody2D>();
+            // get the direction of the joystick
+            direction = stick.normalized;
         }
 
-        // Update is called once per frame
         void Update()
         {
-            SetSpeed();
-            SetRotation();
             Move();
         }
 
-        void SetSpeed()
+        public void Move()
         {
-            currentSpeed = stick.normalized * acceleration;
-        }
-
-        void SetRotation()
-        {
-            if (stick.normalized != Vector2.zero)
+            // if there is an input
+            if (direction != idle)
             {
-                if (stick.normalized == up)
-                {
-                    
-                }
-                else if (stick.normalized == upRight)
-                {
+                // Use the speed and calculate the metres/second or acceleration until the maximum speed is reached
+                currentSpeed.x = Mathf.Clamp(currentSpeed.x + (MaxSpeed / AccelerationTime) * Time.deltaTime * direction.x, -MaxSpeed, MaxSpeed);
+                currentSpeed.y = Mathf.Clamp(currentSpeed.y + (MaxSpeed / AccelerationTime) * Time.deltaTime * direction.y, -MaxSpeed, MaxSpeed);
 
-                } else if(stick.normalized == right)
-                {
-                } else if(stick.normalized == downRight)
-                {
+                RotationCalculations();
 
-                } else if(stick.normalized == down)
-                {
-
-                } else if(stick.normalized == downLeft)
-                {
-
-                } else if(stick.normalized == left)
-                {
-
-                } else if(stick.normalized == upLeft)
-                {
-
-                }
-                transform.rotation = Quaternion.Slerp(transform.rotation, )
             }
+            // if there is no input
+            else
+            {
+                // application of friction/deceleration depending on the stored direction
+                if (currentSpeed.x > 0) // for moving right
+                {
+                    currentSpeed.x = Mathf.Clamp(currentSpeed.x - (MaxSpeed / DecelerationTime) * Time.deltaTime, 0, MaxSpeed);
+                }
+                if (currentSpeed.x < 0) // for moving left
+                {
+                    currentSpeed.x = Mathf.Clamp(currentSpeed.x + (MaxSpeed / DecelerationTime) * Time.deltaTime, -MaxSpeed, 0);
+                }
+                if (currentSpeed.y > 0) // for going down
+                {
+                    currentSpeed.y = Mathf.Clamp(currentSpeed.y - (MaxSpeed / DecelerationTime) * Time.deltaTime, 0, MaxSpeed);
+                }
+                if (currentSpeed.y < 0) // for going up
+                {
+                    currentSpeed.y = Mathf.Clamp(currentSpeed.y + (MaxSpeed / DecelerationTime) * Time.deltaTime, -MaxSpeed, 0);
+                }
+            }
+
+            // Update the transform of the player
+            transform.position = new Vector2(transform.position.x + currentSpeed.x * Time.deltaTime, transform.position.y + currentSpeed.y * Time.deltaTime);
+
         }
 
-        void Move()
+        public void RotationCalculations()
         {
-            body.AddForce(currentSpeed * Time.deltaTime);
+            // get the looking rotation/moving direction of the player
+            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, direction);
+
+            // update the rotation of this object
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotationSpeed * Time.deltaTime);
         }
     }
 }
