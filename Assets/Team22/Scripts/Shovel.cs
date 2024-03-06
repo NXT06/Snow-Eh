@@ -10,6 +10,7 @@ public class Shovel : MicrogameInputEvents
     public GameObject snowOnShovel;
     public GameObject snowBall; 
     public float snow;
+    public static Vector2 rotation; 
     Rigidbody2D rb;
     float speed = 3;
     
@@ -28,7 +29,7 @@ public class Shovel : MicrogameInputEvents
     void Update()
     {
        
-        if (snowSize > 9)
+        if (snowSize > 20)
         {
             
             startPos.x = transform.position.x;
@@ -52,7 +53,7 @@ public class Shovel : MicrogameInputEvents
             snowOnShovel.SetActive(true);
         }
 
-        if (snowSize < 10) { 
+        if (snowSize < 20) { 
         snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
     }
     }
