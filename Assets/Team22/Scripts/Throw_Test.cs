@@ -22,7 +22,7 @@ public class ThrowTest : MonoBehaviour
     public float lerpTimerPos;
     public float lerpTimerScale;
     bool canExplode;
-    Vector2 startPos; 
+    public Vector2 startPos; 
 
     Vector3 movement;
 
@@ -59,7 +59,7 @@ public class ThrowTest : MonoBehaviour
         
 
         if (transform.position.x > startPos.x + 8f || transform.position.y > startPos.y + 8f || transform.position.x < startPos.x - 8f || transform.position.y < startPos.y - 8
-        || transform.position.x > 5 || transform.position.y > 3 || transform.position.x < -5 || transform.position.y < -3.0)
+        || transform.position.x > 5 || transform.position.y > 3 || transform.position.x < -5 || transform.position.y < -4)
         {
 
             Instantiate(snowball, transform.position, transform.rotation);

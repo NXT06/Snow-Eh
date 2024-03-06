@@ -14,7 +14,7 @@ public class Counter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(snowPercent);
+        //Debug.Log(snowPercent);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
