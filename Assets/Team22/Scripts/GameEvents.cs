@@ -6,41 +6,18 @@ using UnityEngine.InputSystem.iOS;
 
 public class GameEvents : MicrogameInputEvents
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // get how many snowballs are on each side/get whos the winner
 
-    protected override void OnGameStart()
-    {
-        // Code to execute when the microgame starts
-    }
-
-    protected override void OnFifteenSecondsLeft()
-    {
-        // Code to execute when there are 15 seconds left in the game
-    }
 
     protected override void OnTenSecondsLeft()
     {
         // Code to execute when there are 10 seconds left in the game
     }
 
-    protected override void OnFiveSecondsLeft()
-    {
-        // Code to execute when there are 5 seconds left in the game
-    }
-
     protected override void OnTimesUp()
     {
-        // Code to execute when time runs out in the game
+        //determine who is the winner, then call a prefab object with a behaviour script and proper end screen image, and have it drop down and maybe bounce
     }
 
 }
