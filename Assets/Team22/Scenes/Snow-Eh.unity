@@ -11632,6 +11632,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24300002, guid: de9d93383e27afa4f838edf79bbd7148, type: 2}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       propertyPath: player
       value: 1
       objectReference: {fileID: 0}
@@ -15608,12 +15612,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98dbf69488783b4e9b26b271a0cf4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getInputFrom: 0
   movement: {x: 0, y: 0}
   snowOnShovel: {fileID: 687837531}
   snowBall: {fileID: 5740017831554361892, guid: d1143b72aee46cf4cb75078e75625551, type: 3}
   snow: 0
   throwPos: {fileID: 981040722}
   prompt: {fileID: 1380367286}
+  mixer: {fileID: 24300002, guid: de9d93383e27afa4f838edf79bbd7148, type: 2}
   throwSnowClipList:
   - {fileID: 8300000, guid: 65d0ab3e152ce1040a2b20234958fc90, type: 3}
   - {fileID: 8300000, guid: 410c44619ef1fde4a80dce1af3c6e3c0, type: 3}

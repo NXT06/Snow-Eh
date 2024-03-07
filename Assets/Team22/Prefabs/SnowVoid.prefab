@@ -191,4 +191,5 @@ MonoBehaviour:
   lerpTimerScale: 0
   startPos: {x: 0, y: 0}
   shovelStart: {fileID: 0}
+  mixer: {fileID: 24300002, guid: de9d93383e27afa4f838edf79bbd7148, type: 2}
   impactSound: {fileID: 8300000, guid: fff1c9d7c45068e44b15ac58cb892ffd, type: 3}
