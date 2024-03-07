@@ -15,7 +15,7 @@ namespace team22
         public float DecelerationTime = 5f;
         public float MaxSpeed = 7f;
         public float RotationSpeed = 360f;
-
+        public int playerNum; 
         // boundary variables
         public float upperBound = 1;
         public float lowerBound = -1;
@@ -110,7 +110,8 @@ namespace team22
 
         protected override void OnButton1Released(InputAction.CallbackContext context)
         {
-            // run anything in this function when the 1st button is pressed
+            Shovel.canThrow = true;
+           
         }
 
     }

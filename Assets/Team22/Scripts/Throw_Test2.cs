@@ -33,8 +33,8 @@ public class Throw_Test2 : MonoBehaviour
         endPosition = transform.position + movement;
         endPosition.x += 10;
 
-        startPos.x = Shovel2.startPos.x;
-        startPos.y = Shovel2.startPos.y;
+        startPos.x = Shovel2.startPos2.x;
+        startPos.y = Shovel2.startPos2.y;
     }
 
     void Update()

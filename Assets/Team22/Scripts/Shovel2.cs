@@ -8,10 +8,10 @@ public class Shovel2 : MonoBehaviour
     public GameObject snowOnShovel;
     public GameObject snowBall;
     public float snow;
-
+    public static bool canThrow; 
     Rigidbody2D rb;
 
-    public static Vector2 startPos;
+    public static Vector2 startPos2;
 
     
     public static int snowSize2;
@@ -23,11 +23,15 @@ public class Shovel2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        ThrowButton();
+    }
     // Update is called once per frame
-   
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (snowSize2 > 1)
+        if (snowSize2 > 0)
         {
             snowOnShovel.SetActive(true);
         }
@@ -37,20 +41,22 @@ public class Shovel2 : MonoBehaviour
             snowOnShovel.transform.localScale = Vector3.one * (snowSize2 * 0.1f);
         }
     }
-    public void ThrowButton(bool canThrow)
+    public void ThrowButton()
     {
         if (canThrow == true)
+        {
             if (snowSize2 > 9)
             {
 
-                startPos.x = transform.position.x;
-                startPos.y = transform.position.y;
+                startPos2.x = transform.position.x;
+                startPos2.y = transform.position.y;
                 Instantiate(snowBall, transform.position, transform.rotation);
                 snowSize2 = 0;
-                Debug.Log(startPos);
+                Debug.Log(startPos2);
 
             }
+            canThrow = false;
+        }
 
-        canThrow = false;
     }
 }

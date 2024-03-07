@@ -10,7 +10,7 @@ public class Shovel : MicrogameInputEvents
     public GameObject snowOnShovel;
     public GameObject snowBall; 
     public float snow;
-   
+    public static bool canThrow; 
     Rigidbody2D rb;
     
     public static Vector2 startPos;
@@ -25,8 +25,12 @@ public class Shovel : MicrogameInputEvents
         rb = GetComponent<Rigidbody2D>();   
     }
 
+    private void Update()
+    {
+        ThrowButton(); 
+    }
     // Update is called once per frame
-   
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (snowSize > 1)
@@ -39,21 +43,23 @@ public class Shovel : MicrogameInputEvents
     }
     }
 
-    public void ThrowButton(bool canThrow)
+    public void ThrowButton()
     {
         if (canThrow == true)
-        if (snowSize > 9)
         {
+            if (snowSize > 8)
+            {
 
-            startPos.x = transform.position.x;
-            startPos.y = transform.position.y;
-            Instantiate(snowBall, transform.position, transform.rotation);
-            snowSize = 0;
-            Debug.Log(startPos);
+                startPos.x = transform.position.x;
+                startPos.y = transform.position.y;
+                Instantiate(snowBall, transform.position, transform.rotation);
+                snowSize = 0;
+                Debug.Log(startPos);
 
+            }
+
+            canThrow = false;
         }
-
-        canThrow = false; 
     }
     
 }
