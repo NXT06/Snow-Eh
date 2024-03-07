@@ -47,7 +47,7 @@ public class Shovel : MicrogameInputEvents
     {
         if (canThrow == true)
         {
-            if (snowSize > 8)
+            if (snowSize > 9)
             {
 
                 startPos.x = transform.position.x;

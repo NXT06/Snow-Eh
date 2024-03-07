@@ -52,7 +52,7 @@ public class Shovel2 : MonoBehaviour
                 startPos2.y = transform.position.y;
                 Instantiate(snowBall, transform.position, transform.rotation);
                 snowSize2 = 0;
-                Debug.Log(startPos2);
+                
 
             }
             canThrow = false;

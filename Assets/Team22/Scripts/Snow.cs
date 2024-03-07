@@ -18,15 +18,17 @@ public class Snow : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && Shovel.snowSize < 10)
+        if (collision.gameObject.CompareTag("Player") && Shovel.snowSize < 20)
         {
             Shovel.snowSize += weight;
-            Shovel2.snowSize2 += weight; 
+           
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Tag8"))
+        if (collision.gameObject.CompareTag("Tag8") && Shovel2.snowSize2 < 20)
         {
-            Shovel2.snowSize2 += weight; 
+            Shovel2.snowSize2 += weight;
+            Debug.Log(Shovel2.snowSize2);
+            Destroy(gameObject);
         }
     }
 }

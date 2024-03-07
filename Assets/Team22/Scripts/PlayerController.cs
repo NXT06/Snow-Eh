@@ -110,7 +110,15 @@ namespace team22
 
         protected override void OnButton1Released(InputAction.CallbackContext context)
         {
-            Shovel.canThrow = true;
+            if (playerNum == 1)
+            {
+
+                Shovel.canThrow = true;
+            }
+            if (playerNum == 2)
+            {
+                Shovel2.canThrow = true;
+            }
            
         }
 
