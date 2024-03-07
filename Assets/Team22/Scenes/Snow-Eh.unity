@@ -4951,12 +4951,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353293466}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0631, y: 1.724, z: 0}
-  m_LocalScale: {x: 0.5150342, y: 0.6412808, z: 0.48075625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.71, y: 4.17, z: 0}
+  m_LocalScale: {x: 0.5574846, y: 0.6700221, z: 0.8391228}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1191042946}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &354260367
 PrefabInstance:
@@ -11562,9 +11562,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3094783819751197590, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 625535901}
-    - targetCorrespondingSourceObject: {fileID: 3094783819751197590, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 353293468}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 939082345365189677, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       insertIndex: -1
@@ -15549,6 +15546,7 @@ MonoBehaviour:
   snow: 0
   throwPos: {fileID: 981040722}
   prompt: {fileID: 1380367286}
+  throwSnowClipList: []
 --- !u!4 &991322856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3094783819751197590, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
@@ -18548,9 +18546,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3094783819751197590, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 981040722}
-    - targetCorrespondingSourceObject: {fileID: 3094783819751197590, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1380367288}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 939082345365189677, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       insertIndex: -1
@@ -21663,11 +21658,11 @@ Transform:
   m_GameObject: {fileID: 1380367286}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.7669, z: 0}
-  m_LocalScale: {x: 0.4955879, y: 0.62387794, z: 0.51536834}
+  m_LocalPosition: {x: 3.68, y: 4.21, z: 0}
+  m_LocalScale: {x: 0.5630807, y: 0.68255115, z: 0.907976}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 991322856}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1382902899 stripped
 Transform:
@@ -33831,6 +33826,8 @@ SceneRoots:
   - {fileID: 537261656}
   - {fileID: 450130619}
   - {fileID: 171373780}
+  - {fileID: 1380367288}
+  - {fileID: 353293468}
   - {fileID: 780370182}
   - {fileID: 1183465564}
   - {fileID: 545503872}
