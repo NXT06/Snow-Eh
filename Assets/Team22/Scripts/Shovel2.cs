@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 
 namespace team22
 {
-    public class Shovel2 : MonoBehaviour
+    public class Shovel2 : MicrogameInputEvents
     {
         public Vector2 movement;
         public GameObject snowOnShovel;
