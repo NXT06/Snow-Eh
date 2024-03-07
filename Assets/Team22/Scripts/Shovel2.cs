@@ -31,7 +31,7 @@ public class Shovel2 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (snowSize2 > 0)
+        if (snowSize2 > 1)
         {
             snowOnShovel.SetActive(true);
         }
