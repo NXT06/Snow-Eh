@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using team22;
 
 public class Shovel : MicrogameInputEvents
 {
@@ -12,20 +12,19 @@ public class Shovel : MicrogameInputEvents
     public float snow;
     public static bool canThrow; 
     Rigidbody2D rb;
-    
+    public Transform throwPos;
+    public GameObject prompt; 
     public static Vector2 startPos;
 
     int snowSize2;
-    public static int snowSize;
-
-    public List<AudioClip> throwSnowClipList = new List<AudioClip>();
-
+    public static int snowSize; 
     // Start is called before the first frame update
     void Start()
     {
         snowOnShovel.SetActive(false);
         snowSize = 0; 
         rb = GetComponent<Rigidbody2D>();   
+        prompt.SetActive(false);
     }
 
     private void Update()
@@ -34,6 +33,14 @@ public class Shovel : MicrogameInputEvents
         if (snowSize < 10)
         {
             snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
+        }
+        if (snowSize > 9)
+        {
+            prompt.SetActive(true);
+        }
+        else
+        {
+            prompt.SetActive(false);
         }
     }
     // Update is called once per frame
@@ -50,19 +57,18 @@ public class Shovel : MicrogameInputEvents
 
     public void ThrowButton()
     {
-        if (canThrow == true)
+        if (canThrow == true && snowSize > 9)
         {
-            if (snowSize > 9)
-            {
-
-                startPos.x = transform.position.x;
-                startPos.y = transform.position.y;
-                Instantiate(snowBall, transform.position, transform.rotation);
-                snowSize = 0;
-                Debug.Log(startPos);
-                AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
-
-            }
+           
+                
+                    startPos.x = transform.position.x;
+                    startPos.y = transform.position.y;
+                    Instantiate(snowBall, throwPos.position, transform.rotation);
+                    snowSize = 0;
+                    Debug.Log(startPos);
+                   
+                
+            
 
             canThrow = false;
         }

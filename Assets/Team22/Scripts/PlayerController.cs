@@ -21,12 +21,16 @@ namespace team22
         public float lowerBound = -1;
         public float leftBound = -1;
         public float rightBound = 1;
-
+        public Animator animator;
         // joystick directions
         Vector2 idle = Vector2.zero;
 
         Vector2 direction;
 
+        private void Start()
+        {
+            animator = GetComponent<Animator>();    
+        }
         void Update()
         {
             direction = stick.normalized;
@@ -39,6 +43,7 @@ namespace team22
             // if there is an input
             if (direction != idle)
             {
+                animator.SetBool("Walking", true); 
                 // Use the speed and calculate the metres/second or acceleration until the maximum speed is reached
                 currentSpeed.x = Mathf.Clamp(currentSpeed.x + (MaxSpeed / AccelerationTime) * Time.deltaTime * direction.x, -MaxSpeed, MaxSpeed);
                 currentSpeed.y = Mathf.Clamp(currentSpeed.y + (MaxSpeed / AccelerationTime) * Time.deltaTime * direction.y, -MaxSpeed, MaxSpeed);
@@ -49,7 +54,7 @@ namespace team22
             // if there is no input
             else
             {
-                
+                animator.SetBool("Walking", false); 
                 // application of friction/deceleration depending on the stored direction
                 if (currentSpeed.x > 0) // for moving right
                 {
@@ -110,16 +115,21 @@ namespace team22
 
         protected override void OnButton1Released(InputAction.CallbackContext context)
         {
-            if (playerNum == 1)
-            {
-
-                Shovel.canThrow = true;
-            }
-            if (playerNum == 2)
-            {
-                Shovel2.canThrow = true;
-            }
            
+            
+            if (playerNum == 1 && Shovel.snowSize > 9)
+            {
+                animator.SetTrigger("Throw");
+                Shovel.canThrow = true;
+               
+            }
+            if (playerNum == 2 && Shovel2.snowSize2 > 9)
+            {
+                animator.SetTrigger("Throw");
+                Shovel2.canThrow = true;
+               
+            }
+            
         }
 
     }

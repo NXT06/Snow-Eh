@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using team22;
 
 public class Shovel2 : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class Shovel2 : MonoBehaviour
     public float snow;
     public static bool canThrow; 
     Rigidbody2D rb;
-
+    public Transform throwPos;
+    public GameObject prompt; 
     public static Vector2 startPos2;
 
     
@@ -24,6 +26,7 @@ public class Shovel2 : MonoBehaviour
         snowOnShovel.SetActive(false);
         snowSize2 = 0;
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     private void Update()
@@ -32,6 +35,14 @@ public class Shovel2 : MonoBehaviour
         if (snowSize2 < 10)
         {
             snowOnShovel.transform.localScale = Vector3.one * (snowSize2 * 0.1f);
+        }
+        if (snowSize2 > 9)
+        {
+            prompt.SetActive(true);
+        }
+        else
+        {
+            prompt.SetActive(false);
         }
     }
     // Update is called once per frame
@@ -47,19 +58,17 @@ public class Shovel2 : MonoBehaviour
     }
     public void ThrowButton()
     {
-        if (canThrow == true)
+        if (canThrow == true && snowSize2 > 9)
         {
-            if (snowSize2 > 9)
-            {
-
+           
                 startPos2.x = transform.position.x;
                 startPos2.y = transform.position.y;
-                Instantiate(snowBall, transform.position, transform.rotation);
+                Instantiate(snowBall, throwPos.position, transform.rotation);
                 snowSize2 = 0;
                 AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
 
 
-            }
+            
             canThrow = false;
         }
 
