@@ -6,9 +6,11 @@ using team22;
 namespace team22
 {
 
-    public class Counter : MonoBehaviour
+
+
+    public class Counter2 : MonoBehaviour
     {
-        public static int snowPercent;
+        public static int snowPercent2;
         // Start is called before the first frame update
         void Start()
         {
@@ -25,11 +27,11 @@ namespace team22
         {
             if (collision.gameObject.CompareTag("Tag3"))
             {
-                snowPercent += 2;
+                snowPercent2 += 2;
             }
             if (collision.gameObject.CompareTag("Tag4"))
             {
-                snowPercent++;
+                snowPercent2++;
             }
 
         }
