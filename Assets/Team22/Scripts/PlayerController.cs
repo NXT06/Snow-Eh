@@ -22,6 +22,7 @@ namespace team22
         public float leftBound = -1;
         public float rightBound = 1;
         public Animator animator;
+        public static bool knockback; 
         // joystick directions
         Vector2 idle = Vector2.zero;
 
@@ -111,6 +112,21 @@ namespace team22
                 // cancel deceleration
                 currentSpeed.y = 0;
             }
+        }
+
+        public void Knockback()
+        {
+            if (knockback && playerNum == 1)
+            {
+                currentSpeed.x -= 5;
+                knockback = false;
+            }
+            if (knockback && playerNum == 2)
+            {
+                currentSpeed.x += 5;
+                knockback = false;
+            }
+            
         }
 
         protected override void OnButton1Released(InputAction.CallbackContext context)
