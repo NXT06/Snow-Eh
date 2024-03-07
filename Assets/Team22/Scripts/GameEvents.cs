@@ -2,33 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using team22;
-using UnityEngine.InputSystem.iOS;
+//using UnityEngine.InputSystem.iOS;
 
-public class GameEvents : MicrogameInputEvents
+
+namespace team22
 {
-    // get how many snowballs are on each side/get whos the winner
-
-    public GameObject screen1;
-    public GameObject screen2;
-
-    public float screenStopLocation = 9;
-
-    protected override void OnTenSecondsLeft()
+    public class GameEvents : MicrogameInputEvents
     {
-        // executes when there are 10 seconds left in the game, potential 10 second left message
-    }
+        // get how many snowballs are on each side/get whos the winner
 
-    protected override void OnTimesUp()
-    {
-        //determine who is the winner, then call EndScreenBehaviour and pass the winning screen
+        public GameObject screen1;
+        public GameObject screen2;
 
-        EndScreenBehaviour(screen1);
-    }
+        private bool timeIsUp = false;
+
+        public Vector2 screenStartLocation = new Vector2(0, 8.6f);
+        public float screenStopLocation = 9;
+
+        protected override void OnTimesUp()
+        {
+            timeIsUp = true;
+            //Instantiate(, screenStartLocation, Quaternion.identity);
+        }
+
+        public void Update()
+        {
+            if (timeIsUp) 
+            {
+                //determine who is the winner, then call EndScreenBehaviour and pass the winning screen
+                EndScreenBehaviour(screen1);
+            }  
+        }
 
 
-    public void EndScreenBehaviour(GameObject winningScreen)
-    {
-        // change screen location
-        winningScreen.transform.position = Vector3.zero;
+        public void EndScreenBehaviour(GameObject winningScreen)
+        {
+            // change screen location
+            winningScreen.transform.position = Vector3.zero;
+        }
     }
 }
