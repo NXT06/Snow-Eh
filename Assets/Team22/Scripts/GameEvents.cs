@@ -21,11 +21,13 @@ namespace team22
 
         public Vector2 screenStartLocation = new Vector2(0, 8.6f);
         public Vector2 screenStopLocation = Vector2.zero;
-        public float interpolateValue;
-
-        float timeElapsed;
-        float lerpDuration = 2.5f;
         
+        float timeElapsed;
+        public float interpolateValue;
+        float lerpDuration = 2.5f;
+
+        public AnimationCurve curve1;
+
 
         protected override void OnTimesUp()
         {
@@ -83,8 +85,10 @@ namespace team22
             // if the elapsed time for the lerp is less than the duration
             if (timeElapsed < lerpDuration)
             {
+                interpolateValue = curve1.Evaluate(timeElapsed / lerpDuration);
+
                 // Update the screen's transform porition
-                winningScreen.transform.position = Vector3.Lerp(screenStartLocation, screenStopLocation, timeElapsed / lerpDuration);
+                winningScreen.transform.position = Vector3.Lerp(screenStartLocation, screenStopLocation, interpolateValue);
                 timeElapsed += Time.deltaTime;
             }
         }
