@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8955549457650656420}
   m_Layer: 9
   m_Name: SnowSmall (20)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 4164095393712403434}
   m_Layer: 9
   m_Name: SnowSmall (18)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 5624430197999786453}
   m_Layer: 9
   m_Name: SnowSmall (26)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 7545930740777161819}
   m_Layer: 9
   m_Name: SnowSmall (17)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 604212209472204828}
   m_Layer: 9
   m_Name: SnowSmall (22)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 1604933935247065329}
   m_Layer: 9
   m_Name: SnowSmall (23)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 5915731545171065669}
   m_Layer: 9
   m_Name: SnowBig (11)
-  m_TagString: Untagged
+  m_TagString: Tag3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 2697880638733404070}
   m_Layer: 9
   m_Name: SnowSmall (15)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1359,7 +1359,7 @@ GameObject:
   - component: {fileID: 5622478920868838123}
   m_Layer: 9
   m_Name: SnowSmall (16)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1521,7 +1521,7 @@ GameObject:
   - component: {fileID: 5904467100536668260}
   m_Layer: 9
   m_Name: SnowSmall (28)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1683,7 +1683,7 @@ GameObject:
   - component: {fileID: 7354253229145824759}
   m_Layer: 9
   m_Name: SnowSmall (24)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1845,7 +1845,7 @@ GameObject:
   - component: {fileID: 2367945665484893374}
   m_Layer: 9
   m_Name: SnowSmall (13)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2007,7 +2007,7 @@ GameObject:
   - component: {fileID: 7274224750697334298}
   m_Layer: 9
   m_Name: SnowSmall (27)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2169,7 +2169,7 @@ GameObject:
   - component: {fileID: 3808675755562019830}
   m_Layer: 9
   m_Name: SnowSmall (14)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2331,7 +2331,7 @@ GameObject:
   - component: {fileID: 4474437842243086340}
   m_Layer: 9
   m_Name: SnowSmall (25)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2493,7 +2493,7 @@ GameObject:
   - component: {fileID: 223604027497177715}
   m_Layer: 9
   m_Name: SnowSmall (21)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2655,7 +2655,7 @@ GameObject:
   - component: {fileID: 7471108259105838853}
   m_Layer: 9
   m_Name: SnowSmall (19)
-  m_TagString: Untagged
+  m_TagString: Tag4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

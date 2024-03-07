@@ -68,7 +68,7 @@ public class Shovel : MicrogameInputEvents
                     startPos.y = transform.position.y;
                     Instantiate(snowBall, throwPos.position, transform.rotation);
                     snowSize = 0;
-                    Debug.Log(startPos);
+                    
                     AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
                 
             

@@ -30,7 +30,7 @@ namespace team22
             if (collision.gameObject.CompareTag("Tag8") && Shovel2.snowSize2 < 20)
             {
                 Shovel2.snowSize2 += weight;
-                Debug.Log(Shovel2.snowSize2);
+                //Debug.Log(Shovel2.snowSize2);
                 Destroy(gameObject);
             }
         }
