@@ -15,35 +15,17 @@ MonoBehaviour:
   includeInRandomizer: 1
   teamNumber: 22
   gameTitle: Snow, Eh!
-  gameIcon: {fileID: 21300000, guid: 395ff8dc86161fd45beea9c82dd4fa9d, type: 3}
-  announcerText: Clear the Snow
-  announcerAudioFile: Clear the Snow-RX10MDc_73-01
-  _announcerAudio: {fileID: 8300000, guid: c2351a313e0b1a945835e40619b87547, type: 3}
+  gameIcon: {fileID: 0}
+  announcerText: 
+  announcerAudioFile: 
+  _announcerAudio: {fileID: 0}
   singlePlayerScene: {fileID: 0}
   twoPlayerScene: {fileID: 102900000, guid: 3437194ad32224e4194b2ecaae148eaa, type: 3}
-  controls:
-  - label: Move
-    primary: 124
-    joiner: 0
-    secondary: 0
-  - label: Throw
-    primary: 9
-    joiner: 0
-    secondary: 0
+  controls: []
   rightPlayerAltControls: []
   singlePlayerScenePath: 
   twoPlayerScenePath: Assets/Team22/Scenes/Snow-Eh.unity
-  postgameMessages:
-  - Sorry aboot that...
-  - That's snow shovelling for you, eh?
-  - Anyone up for some Timmies?
-  - Your neighbor will remember this.
-  - Maybe a snow blower would've been helpful...
-  bannerImage: {fileID: 21300000, guid: f7c332526d7ceef478e5e9040ed810ef, type: 3}
-  developerCredits:
-  - Eva Blinova
-  - Gil Carter
-  - Sile Keenan
-  - Shaun Parker
-  - Sydney Smith
+  postgameMessages: []
+  bannerImage: {fileID: 0}
+  developerCredits: []
   licensedWorksCredits: []
