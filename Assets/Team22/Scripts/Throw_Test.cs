@@ -27,6 +27,8 @@ public class ThrowTest : MonoBehaviour
 
     Vector3 movement;
 
+    [SerializeField] public AudioClip impactSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,10 +52,10 @@ public class ThrowTest : MonoBehaviour
             transform.localScale = Vector3.Lerp(smallScale, peakScale, interpolation1);
 
             lerpTimerScale += Time.deltaTime * 0.7f;
-            
-            
 
 
+
+        
 
         
             
@@ -67,6 +69,8 @@ public class ThrowTest : MonoBehaviour
            
            
             Destroy(gameObject);
+
+            AudioSource.PlayClipAtPoint(impactSound, transform.position, 10f);
             
        }
 

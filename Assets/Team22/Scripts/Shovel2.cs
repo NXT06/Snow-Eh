@@ -15,6 +15,9 @@ public class Shovel2 : MonoBehaviour
 
     
     public static int snowSize2;
+
+    public List<AudioClip> throwSnowClipList = new List<AudioClip>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +56,8 @@ public class Shovel2 : MonoBehaviour
                 startPos2.y = transform.position.y;
                 Instantiate(snowBall, transform.position, transform.rotation);
                 snowSize2 = 0;
-                
+                AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
+
 
             }
             canThrow = false;

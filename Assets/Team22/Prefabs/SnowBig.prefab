@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 2
+  shovellingSound: {fileID: 8300000, guid: 8ad555088e4945e47a31bac9334f19dc, type: 3}
 --- !u!50 &7604038396474752895
 Rigidbody2D:
   serializedVersion: 4

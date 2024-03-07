@@ -180,3 +180,6 @@ MonoBehaviour:
   snowball: {fileID: 3492261960209800254, guid: e946dcb12963d7f4984d0c71fa38fcd6, type: 3}
   lerpTimerPos: 0
   lerpTimerScale: 0
+  startPos: {x: 0, y: 0}
+  shovelStart: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: fff1c9d7c45068e44b15ac58cb892ffd, type: 3}
