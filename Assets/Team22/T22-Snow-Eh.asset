@@ -15,7 +15,7 @@ MonoBehaviour:
   includeInRandomizer: 1
   teamNumber: 22
   gameTitle: Snow, Eh!
-  gameIcon: {fileID: 0}
+  gameIcon: {fileID: 21300000, guid: 2fadd2b4e66a43d4193fdb53b737b110, type: 3}
   announcerText: Clear the Snow
   announcerAudioFile: Clear the Snow-RX10MDc_73-01
   _announcerAudio: {fileID: 8300000, guid: c2351a313e0b1a945835e40619b87547, type: 3}
