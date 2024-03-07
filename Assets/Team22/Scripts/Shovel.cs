@@ -27,7 +27,11 @@ public class Shovel : MicrogameInputEvents
 
     private void Update()
     {
-        ThrowButton(); 
+        ThrowButton();
+        if (snowSize < 10)
+        {
+            snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
+        }
     }
     // Update is called once per frame
 
@@ -38,9 +42,7 @@ public class Shovel : MicrogameInputEvents
             snowOnShovel.SetActive(true);
         }
 
-        if (snowSize < 10) { 
-        snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
-    }
+        
     }
 
     public void ThrowButton()

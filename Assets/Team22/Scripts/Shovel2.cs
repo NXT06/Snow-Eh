@@ -26,6 +26,10 @@ public class Shovel2 : MonoBehaviour
     private void Update()
     {
         ThrowButton();
+        if (snowSize2 < 10)
+        {
+            snowOnShovel.transform.localScale = Vector3.one * (snowSize2 * 0.1f);
+        }
     }
     // Update is called once per frame
 
@@ -36,10 +40,7 @@ public class Shovel2 : MonoBehaviour
             snowOnShovel.SetActive(true);
         }
 
-        if (snowSize2 < 10)
-        {
-            snowOnShovel.transform.localScale = Vector3.one * (snowSize2 * 0.1f);
-        }
+      
     }
     public void ThrowButton()
     {
