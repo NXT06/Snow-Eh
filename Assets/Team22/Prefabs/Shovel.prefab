@@ -108,7 +108,9 @@ MonoBehaviour:
   snowOnShovel: {fileID: 1329071547802160817}
   snowBall: {fileID: 4614238264699174325, guid: f5719a753457d7d449f51262e25f947d, type: 3}
   snow: 0
-  throwSnowClipList:
+  throwPos: {fileID: 0}
+  prompt: {fileID: 0}
+  snowThrowSoundList:
   - {fileID: 8300000, guid: 65d0ab3e152ce1040a2b20234958fc90, type: 3}
   - {fileID: 8300000, guid: 410c44619ef1fde4a80dce1af3c6e3c0, type: 3}
   - {fileID: 8300000, guid: a073a5fff2d7b7a46896186b380eba48, type: 3}
@@ -208,6 +210,7 @@ MonoBehaviour:
   lowerBound: -20
   leftBound: -20
   rightBound: 20
+  animator: {fileID: 0}
 --- !u!1 &5095945114834083347
 GameObject:
   m_ObjectHideFlags: 0

@@ -65,10 +65,10 @@ public class Shovel2 : MonoBehaviour
                 startPos2.y = transform.position.y;
                 Instantiate(snowBall, throwPos.position, transform.rotation);
                 snowSize2 = 0;
-                
+                AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
 
 
-            
+
             canThrow = false;
         }
 
