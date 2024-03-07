@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3297486156598984716}
   m_Layer: 9
   m_Name: SnowBig
-  m_TagString: Untagged
+  m_TagString: Tag3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 2
-  shovellingSound: {fileID: 8300000, guid: 8ad555088e4945e47a31bac9334f19dc, type: 3}
 --- !u!50 &7604038396474752895
 Rigidbody2D:
   serializedVersion: 4
