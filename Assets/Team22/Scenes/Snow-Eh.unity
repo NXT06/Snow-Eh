@@ -11645,6 +11645,30 @@ PrefabInstance:
       propertyPath: getInputFrom
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: throwSnowClipList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: throwSnowClipList.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 65d0ab3e152ce1040a2b20234958fc90, type: 3}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: throwSnowClipList.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 410c44619ef1fde4a80dce1af3c6e3c0, type: 3}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: throwSnowClipList.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a073a5fff2d7b7a46896186b380eba48, type: 3}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: throwSnowClipList.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 31d2b3a2e97e1be4eb338d3e1c9766f1, type: 3}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: throwSnowClipList.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9eb9282c8d13ba4439fe4d82ce15205c, type: 3}
     - target: {fileID: 939082345365189677, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       propertyPath: m_Name
       value: Player 1 (Bear)
@@ -15588,7 +15612,12 @@ MonoBehaviour:
   snow: 0
   throwPos: {fileID: 981040722}
   prompt: {fileID: 1380367286}
-  throwSnowClipList: []
+  throwSnowClipList:
+  - {fileID: 8300000, guid: 65d0ab3e152ce1040a2b20234958fc90, type: 3}
+  - {fileID: 8300000, guid: 410c44619ef1fde4a80dce1af3c6e3c0, type: 3}
+  - {fileID: 8300000, guid: a073a5fff2d7b7a46896186b380eba48, type: 3}
+  - {fileID: 8300000, guid: 31d2b3a2e97e1be4eb338d3e1c9766f1, type: 3}
+  - {fileID: 8300000, guid: 9eb9282c8d13ba4439fe4d82ce15205c, type: 3}
 --- !u!4 &991322856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3094783819751197590, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}

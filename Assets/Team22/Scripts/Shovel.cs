@@ -18,6 +18,9 @@ public class Shovel : MicrogameInputEvents
 
     int snowSize2;
     public static int snowSize; 
+
+    public List<AudioClip> throwSnowClipList = new List<AudioClip>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +69,7 @@ public class Shovel : MicrogameInputEvents
                     Instantiate(snowBall, throwPos.position, transform.rotation);
                     snowSize = 0;
                     Debug.Log(startPos);
-                   
+                    AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
                 
             
 

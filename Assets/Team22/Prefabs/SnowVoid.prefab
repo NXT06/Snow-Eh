@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bb534eea162a6f40a5d2a46261e2764, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,3 +191,4 @@ MonoBehaviour:
   lerpTimerScale: 0
   startPos: {x: 0, y: 0}
   shovelStart: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: fff1c9d7c45068e44b15ac58cb892ffd, type: 3}
