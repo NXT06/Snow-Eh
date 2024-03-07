@@ -12,7 +12,6 @@ public class Shovel : MicrogameInputEvents
     public float snow;
    
     Rigidbody2D rb;
-    float speed = 3;
     
     public static Vector2 startPos;
 
@@ -27,37 +26,34 @@ public class Shovel : MicrogameInputEvents
     }
 
     // Update is called once per frame
-    void Update()
+   
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        snowSize2 = snowSize; 
-        if (snowSize2 > 9)
+        if (snowSize > 1)
+        {
+            snowOnShovel.SetActive(true);
+        }
+
+        if (snowSize < 10) { 
+        snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
+    }
+    }
+
+    public void ThrowButton(bool canThrow)
+    {
+        if (canThrow == true)
+        if (snowSize > 9)
         {
 
             startPos.x = transform.position.x;
             startPos.y = transform.position.y;
             Instantiate(snowBall, transform.position, transform.rotation);
-            snowSize2 = 0;
+            snowSize = 0;
             Debug.Log(startPos);
-            
-        }
-        
 
-    }
-
-    private void FixedUpdate()
-    {
-       rb.velocity = movement;  
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (snowSize2 > 1)
-        {
-            snowOnShovel.SetActive(true);
         }
 
-        if (snowSize2 < 10) { 
-        snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
-    }
+        canThrow = false; 
     }
     
 }
