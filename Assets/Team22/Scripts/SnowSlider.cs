@@ -22,7 +22,7 @@ namespace team22
             // slider.maxValue = (Counter.snowPercent + Counter2.snowPercent2) ;
 
             slider.value = 0 + Counter.snowPercent;
-            Debug.Log(slider.value);
+            //Debug.Log(slider.value);
         }
 
     }
