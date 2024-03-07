@@ -24,7 +24,7 @@ public class ThrowPrompt : MonoBehaviour
         interpolation1 = curve1.Evaluate(lerpTimerScale);
         transform.localScale = Vector3.Lerp(smallScale, peakScale, interpolation1);
 
-        lerpTimerScale += Time.deltaTime * 0.7f;
+        lerpTimerScale += Time.deltaTime * 2f;
 
     }
 }
