@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Snow : MonoBehaviour
 {
-    public int weight; 
+    public int weight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +15,9 @@ public class Snow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(Shovel.snowSize);
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && Shovel.snowSize < 10)
@@ -24,9 +26,11 @@ public class Snow : MonoBehaviour
              
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Tag8"))
+        if (collision.gameObject.CompareTag("Player") && Shovel.snowSize < 10)
         {
-            Shovel2.snowSize2 += weight; 
+            Shovel2.snowSize2 += weight;
+
+            Destroy(gameObject);
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shovel2 : MonoBehaviour
+public class Shovel2 : MicrogameInputEvents
 {
     public Vector2 movement;
     public GameObject snowOnShovel;
@@ -36,20 +36,22 @@ public class Shovel2 : MonoBehaviour
         {
             snowOnShovel.transform.localScale = Vector3.one * (snowSize2 * 0.1f);
         }
+
     }
+
     public void ThrowButton(bool canThrow)
     {
         if (canThrow == true)
-            if (snowSize2 > 9)
-            {
+        if (snowSize2 > 9)
+        {
 
-                startPos.x = transform.position.x;
-                startPos.y = transform.position.y;
-                Instantiate(snowBall, transform.position, transform.rotation);
-                snowSize2 = 0;
-                Debug.Log(startPos);
+            startPos.x = transform.position.x;
+            startPos.y = transform.position.y;
+            Instantiate(snowBall, transform.position, transform.rotation);
+            snowSize2 = 0;
+            Debug.Log(startPos);
 
-            }
+        }
 
         canThrow = false;
     }

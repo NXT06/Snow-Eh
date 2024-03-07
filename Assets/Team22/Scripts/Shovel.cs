@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-
 
 public class Shovel : MicrogameInputEvents
 {
@@ -15,7 +13,7 @@ public class Shovel : MicrogameInputEvents
     
     public static Vector2 startPos;
 
-    int snowSize2;
+
     public static int snowSize; 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +32,10 @@ public class Shovel : MicrogameInputEvents
             snowOnShovel.SetActive(true);
         }
 
-        if (snowSize < 10) { 
-        snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
-    }
+        if (snowSize < 10) 
+        { 
+            snowOnShovel.transform.localScale = Vector3.one * (snowSize * 0.1f);
+        }
     }
 
     public void ThrowButton(bool canThrow)

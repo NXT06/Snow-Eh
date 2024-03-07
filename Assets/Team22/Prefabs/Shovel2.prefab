@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3094783819751197590}
   - component: {fileID: 8606904429578713957}
-  - component: {fileID: 649228083734185485}
+  - component: {fileID: 7718372921808507368}
   - component: {fileID: 7226173346362344672}
   - component: {fileID: 9106669389961960736}
   - component: {fileID: 4305734204798381102}
   m_Layer: 6
-  m_Name: Shovel
+  m_Name: Shovel2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_LocalScale: {x: 1.172305, y: 0.4982562, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5681384057182461364}
+  - {fileID: 291292023156779076}
   - {fileID: 816244817628396960}
   - {fileID: 8112912226893956356}
   m_Father: {fileID: 0}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.7264151, g: 0.26383942, b: 0.26383942, a: 1}
+  m_Color: {r: 0.20990565, g: 0.48603588, b: 0.8396226, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &649228083734185485
+--- !u!114 &7718372921808507368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,9 +103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7f0a1f6e586834288d4f5edf43646a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getInputFrom: 0
+  getInputFrom: 2
   movement: {x: 0, y: 0}
-  snowOnShovel: {fileID: 1329071547802160817}
+  snowOnShovel: {fileID: 6387084727569103681}
   snowBall: {fileID: 4614238264699174325, guid: f5719a753457d7d449f51262e25f947d, type: 3}
   snow: 0
 --- !u!50 &7226173346362344672
@@ -192,15 +192,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb5f3c49824d70448212e2e95fb70eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getInputFrom: 0
+  getInputFrom: 2
   AccelerationTime: 1.5
   DecelerationTime: 0.5
   MaxSpeed: 3
   RotationSpeed: 270
-  upperBound: 20
-  lowerBound: -20
-  leftBound: -20
-  rightBound: 20
+  upperBound: 3.5
+  lowerBound: -4
+  leftBound: 0.5
+  rightBound: 5.7
 --- !u!1 &5095945114834083347
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &7451889479020940339
+--- !u!1001 &3294622546217155011
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -377,6 +377,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3094783819751197590}
     m_Modifications:
+    - target: {fileID: 3004526905197990279, guid: 3970b9dca9d6b01499590cbb58393a9f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004526905197990279, guid: 3970b9dca9d6b01499590cbb58393a9f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3004526905197990279, guid: 3970b9dca9d6b01499590cbb58393a9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01
@@ -426,13 +434,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3970b9dca9d6b01499590cbb58393a9f, type: 3}
---- !u!1 &1329071547802160817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8438516964050076290, guid: 3970b9dca9d6b01499590cbb58393a9f, type: 3}
-  m_PrefabInstance: {fileID: 7451889479020940339}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5681384057182461364 stripped
+--- !u!4 &291292023156779076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3004526905197990279, guid: 3970b9dca9d6b01499590cbb58393a9f, type: 3}
-  m_PrefabInstance: {fileID: 7451889479020940339}
+  m_PrefabInstance: {fileID: 3294622546217155011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6387084727569103681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8438516964050076290, guid: 3970b9dca9d6b01499590cbb58393a9f, type: 3}
+  m_PrefabInstance: {fileID: 3294622546217155011}
   m_PrefabAsset: {fileID: 0}
