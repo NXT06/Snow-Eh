@@ -117,13 +117,13 @@ namespace team22
         {
            
             
-            if (playerNum == 1 && Shovel.snowSize > 9)
+            if (playerNum == 1 && Shovel.snowSize > 19)
             {
                 animator.SetTrigger("Throw");
                 Shovel.canThrow = true;
                
             }
-            if (playerNum == 2 && Shovel2.snowSize2 > 9)
+            if (playerNum == 2 && Shovel2.snowSize2 > 19)
             {
                 animator.SetTrigger("Throw");
                 Shovel2.canThrow = true;
