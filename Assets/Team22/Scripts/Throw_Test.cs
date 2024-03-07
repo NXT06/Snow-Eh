@@ -30,6 +30,8 @@ namespace team22
 
         Vector3 movement;
 
+        [SerializeField] public AudioClip impactSound;
+
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -67,9 +69,11 @@ namespace team22
             {
 
                 Instantiate(snowball, transform.position, transform.rotation);
-
+                AudioSource.PlayClipAtPoint(impactSound, transform.position, 10f);
 
                 Destroy(gameObject);
+
+               
 
             }
 
