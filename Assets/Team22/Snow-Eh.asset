@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Snow-Eh
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
-  teamNumber: 0
+  teamNumber: 22
   gameTitle: Snow, Eh!
   gameIcon: {fileID: 0}
-  prompt: 
+  announcerText: 
+  announcerAudioFile: 
+  _announcerAudio: {fileID: 0}
   singlePlayerScene: {fileID: 0}
   twoPlayerScene: {fileID: 102900000, guid: 3437194ad32224e4194b2ecaae148eaa, type: 3}
   controls: []

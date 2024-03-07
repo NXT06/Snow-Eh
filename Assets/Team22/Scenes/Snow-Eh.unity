@@ -11427,6 +11427,10 @@ PrefabInstance:
       propertyPath: upperBound
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4305734204798381102, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: walkingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cc7bbbca3ca06364594120df571d5e66, type: 3}
     - target: {fileID: 4700477068281974479, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       propertyPath: m_SortingOrder
       value: 1
