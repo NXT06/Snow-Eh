@@ -5281,6 +5281,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc1a696c1390d2458b8910203e13e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smallScale: {x: 0.5, y: 0.5, z: 0.5}
+  peakScale: {x: 0.6, y: 0.6, z: 0.6}
+  interpolation1: 0
+  curve1:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0.00012722528
+      outSlope: -0.00012722528
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.5820766
+    - serializedVersion: 3
+      time: 1.0135705
+      value: 0.98412466
+      inSlope: -0.016981918
+      outSlope: -0.016981918
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.44251442
+      outWeight: 0.4708436
+    - serializedVersion: 3
+      time: 2.0034046
+      value: 0.01043892
+      inSlope: 0.03489536
+      outSlope: 0.03489536
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4311943
+      outWeight: 0.33333334
+    m_PreInfinity: 1
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  lerpTimerScale: 0
 --- !u!1001 &354260367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11645,6 +11682,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24300002, guid: de9d93383e27afa4f838edf79bbd7148, type: 2}
+    - target: {fileID: 649228083734185485, guid: c54025a7e1f725741a3b9958cde7da9d, type: 3}
       propertyPath: player
       value: 1
       objectReference: {fileID: 0}
@@ -15628,6 +15669,7 @@ MonoBehaviour:
   snow: 0
   throwPos: {fileID: 981040722}
   prompt: {fileID: 1380367286}
+  mixer: {fileID: 24300002, guid: de9d93383e27afa4f838edf79bbd7148, type: 2}
   throwSnowClipList:
   - {fileID: 8300000, guid: 65d0ab3e152ce1040a2b20234958fc90, type: 3}
   - {fileID: 8300000, guid: 410c44619ef1fde4a80dce1af3c6e3c0, type: 3}
@@ -21771,6 +21813,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc1a696c1390d2458b8910203e13e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smallScale: {x: 0.5, y: 0.5, z: 0.5}
+  peakScale: {x: 0.6, y: 0.6, z: 0.6}
+  interpolation1: 0
+  curve1:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99580467
+      value: 0.99428374
+      inSlope: -0.0124141155
+      outSlope: -0.0124141155
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.797669
+    - serializedVersion: 3
+      time: 1.9775263
+      value: 0.008504808
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 1
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  lerpTimerScale: 0
 --- !u!4 &1382902899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 331909536728444718, guid: 7dc9ff75dc4c89e47bf4b34e7d06e005, type: 3}

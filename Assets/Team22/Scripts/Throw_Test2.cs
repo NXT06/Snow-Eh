@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using team22;
+using UnityEngine.Audio;
+
 namespace team22
 {
 
@@ -27,6 +29,7 @@ namespace team22
 
         public Vector2 startPos;
         public Transform shovelStart;
+        public AudioMixerGroup mixer;
 
         Vector3 movement;
 
@@ -69,13 +72,26 @@ namespace team22
             {
 
                 Instantiate(snowball, transform.position, transform.rotation);
-                AudioSource.PlayClipAtPoint(impactSound, transform.position, 10f);
+                PlayClip(impactSound, transform.position, 10f);
 
                 Destroy(gameObject);
 
             }
 
-
+            static void PlayClip(AudioClip clip, Vector3 position, float volume = 1.0f, AudioMixerGroup group = null)
+            {
+                if (clip == null) return;
+                GameObject gameObject = new GameObject("One shot audio");
+                gameObject.transform.position = position;
+                AudioSource audioSource = (AudioSource)gameObject.AddComponent(typeof(AudioSource));
+                if (group != null)
+                    audioSource.outputAudioMixerGroup = group;
+                audioSource.clip = clip;
+                audioSource.spatialBlend = 1f;
+                audioSource.volume = volume;
+                audioSource.Play();
+                Object.Destroy(gameObject, clip.length * (Time.timeScale < 0.009999999776482582 ? 0.01f : Time.timeScale));
+            }
 
 
 
