@@ -21,7 +21,7 @@ namespace team22
         {
             // slider.maxValue = (Counter.snowPercent + Counter2.snowPercent2) ;
 
-            slider.value = 0 + Counter.snowPercent;
+            slider.value = slider.maxValue - Counter2.snowPercent2;
             Debug.Log(slider.value);
         }
 
