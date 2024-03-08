@@ -28,6 +28,10 @@ namespace team22
 
         public AnimationCurve curve1;
 
+        [SerializeField] public AudioClip whistle;
+        bool whistleBool = false;
+        bool played = false;
+
 
         protected override void OnTimesUp()
         {
@@ -66,22 +70,37 @@ namespace team22
 
             if (timeIsUp) 
             {
+                
+                
                 // determine who is the winner
                 if (bearWins) // if bear wins
                 {
                     // call EndScreenBehaviour and pass the winning screen
                     EndScreenBehaviour(bearScreen);
+                    
                 }
                 if (!bearWins) // if beaver wins
                 {
                     // call EndScreenBehaviour and pass the winning screen
                     EndScreenBehaviour(beaverScreen);
+                    
                 }
             }  
+
+            if (whistleBool && played == false)
+            {
+                AudioSource.PlayClipAtPoint(whistle, transform.position, 10f);
+                Debug.Log("WHISTLEEEE");
+                whistleBool = false;
+                played = true;
+            }
+
         }
 
         public void EndScreenBehaviour(GameObject winningScreen)
         {
+
+            whistleBool = true;
             // if the elapsed time for the lerp is less than the duration
             if (timeElapsed < lerpDuration)
             {
