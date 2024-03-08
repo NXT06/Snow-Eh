@@ -20,7 +20,7 @@ namespace team22
         // Update is called once per frame
         void Update()
         {
-            //Debug.Log(snowPercent2);
+            Debug.Log(snowPercent2);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -46,6 +46,7 @@ namespace team22
                 snowPercent2--;
             }
         }
+
 
 
     }

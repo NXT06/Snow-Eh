@@ -35,11 +35,11 @@ namespace team22
         private void Update()
         {
             ThrowButton();
-            if (snowSize2 < 10)
+            if (snowSize2 <= 20)
             {
-                snowOnShovel.transform.localScale = Vector3.one * (snowSize2 * 0.1f);
+                snowOnShovel.transform.localScale = Vector3.one * (snowSize2 * 0.05f);
             }
-            if (snowSize2 > 9)
+            if (snowSize2 > 19)
             {
                 prompt.SetActive(true);
             }
@@ -47,6 +47,7 @@ namespace team22
             {
                 prompt.SetActive(false);
             }
+            Debug.Log(snowSize2);
         }
         // Update is called once per frame
 
@@ -61,7 +62,7 @@ namespace team22
         }
         public void ThrowButton()
         {
-            if (canThrow == true && snowSize2 > 9)
+            if (canThrow == true)
             {
 
                 startPos2.x = transform.position.x;
@@ -69,7 +70,7 @@ namespace team22
                 Instantiate(snowBall, throwPos.position, transform.rotation);
                 snowSize2 = 0; 
                 PlayClip(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f, mixer);
-                //AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
+               // AudioSource.PlayClipAtPoint(throwSnowClipList[Random.Range(0, throwSnowClipList.Count)], transform.position, 10f);
 
 
 

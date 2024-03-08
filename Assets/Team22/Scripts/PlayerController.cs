@@ -4,6 +4,7 @@ using UnityEngine;
 using team22;
 using UnityEngine.InputSystem.iOS;
 using UnityEngine.InputSystem;
+using System.Threading;
 
 namespace team22
 {
@@ -117,17 +118,17 @@ namespace team22
         {
            
             
-            if (playerNum == 1 && Shovel.snowSize > 9)
+            if (playerNum == 1 && Shovel.snowSize > 19)
             {
                 animator.SetTrigger("Throw");
                 Shovel.canThrow = true;
-               
+                Shovel.snowSize = 0;
             }
-            if (playerNum == 2 && Shovel2.snowSize2 > 9)
+            if (playerNum == 2 && Shovel2.snowSize2 > 19)
             {
                 animator.SetTrigger("Throw");
                 Shovel2.canThrow = true;
-               
+                Shovel2.snowSize2 = 0;
             }
             
         }
