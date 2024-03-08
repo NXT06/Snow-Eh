@@ -8,7 +8,7 @@ namespace team22
 
     public class Counter : MonoBehaviour
     {
-        public static int snowPercent;
+        public static float snowPercent;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {

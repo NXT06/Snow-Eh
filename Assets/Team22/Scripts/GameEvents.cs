@@ -36,12 +36,12 @@ namespace team22
             timeIsUp = true;
             
             // figure out who won and instantiate respective screens
-            if (slider.value < 360) // if the red side wins (Bear)
+            if (slider.value < 1) // if the red side wins (Bear)
             {
                 Instantiate(bearScreen, screenStartLocation, Quaternion.identity);
                 bearWins = true;
             }
-            if (slider.value > 360) // if blue side wins (Beaver)
+            if (slider.value > 1) // if blue side wins (Beaver)
             {
                 Instantiate(beaverScreen, screenStartLocation, Quaternion.identity);
                 bearWins = false;

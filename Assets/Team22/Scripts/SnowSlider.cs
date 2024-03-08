@@ -13,15 +13,16 @@ namespace team22
         // Start is called before the first frame update
         void Start()
         {
-            slider.maxValue = 720;
+            slider.maxValue = 2;
         }
 
         // Update is called once per frame
         void Update()
         {
             // slider.maxValue = (Counter.snowPercent + Counter2.snowPercent2) ;
-
-            slider.value = slider.maxValue - Counter2.snowPercent2;
+            
+            Debug.Log(slider.value);
+            slider.value = (Counter.snowPercent/Counter2.snowPercent2);
             
         }
 
