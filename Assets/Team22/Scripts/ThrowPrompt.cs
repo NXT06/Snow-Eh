@@ -1,30 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using team22;
 
-public class ThrowPrompt : MonoBehaviour
+namespace team22
 {
-    Transform pos;
-
-    public Vector3 smallScale;
-    public Vector3 peakScale;
-    public float interpolation1;
-    public AnimationCurve curve1;
-    public float lerpTimerScale;
-
-
-    private void Start()
+    public class ThrowPrompt : MonoBehaviour
     {
-        pos = GetComponent<Transform>();
-    }
-    // Update is called once per frame
-    void FixedUpdate()
-    {
+        Transform pos;
 
-        interpolation1 = curve1.Evaluate(lerpTimerScale);
-        transform.localScale = Vector3.Lerp(smallScale, peakScale, interpolation1);
+        public Vector3 smallScale;
+        public Vector3 peakScale;
+        public float interpolation1;
+        public AnimationCurve curve1;
+        public float lerpTimerScale;
 
-        lerpTimerScale += Time.deltaTime * 0.7f;
 
+        private void Start()
+        {
+            pos = GetComponent<Transform>();
+        }
+        // Update is called once per frame
+        void FixedUpdate()
+        {
+
+            interpolation1 = curve1.Evaluate(lerpTimerScale);
+            transform.localScale = Vector3.Lerp(smallScale, peakScale, interpolation1);
+
+            lerpTimerScale += Time.deltaTime * 0.7f;
+
+        }
     }
 }

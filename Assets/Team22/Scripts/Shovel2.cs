@@ -47,7 +47,6 @@ namespace team22
             {
                 prompt.SetActive(false);
             }
-            Debug.Log(snowSize2);
         }
         // Update is called once per frame
 

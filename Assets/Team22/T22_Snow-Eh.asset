@@ -15,7 +15,7 @@ MonoBehaviour:
   includeInRandomizer: 1
   teamNumber: 22
   gameTitle: Snow, Eh!
-  gameIcon: {fileID: 21300000, guid: 2fadd2b4e66a43d4193fdb53b737b110, type: 3}
+  gameIcon: {fileID: 21300000, guid: 6f379032c6fd8ce4ca709914317b823b, type: 3}
   announcerText: Clear the Snow
   announcerAudioFile: Clear the Snow-RX10MDc_73-01
   _announcerAudio: {fileID: 8300000, guid: c2351a313e0b1a945835e40619b87547, type: 3}
@@ -39,13 +39,13 @@ MonoBehaviour:
   - Anyone up for some Timmies?
   - Your neighbor will remember this.
   - Maybe a snow blower would've been helpful...
-  bannerImage: {fileID: 21300000, guid: e5a0c69756d858b4285352605c3f33f8, type: 3}
+  bannerImage: {fileID: 21300000, guid: f07a9bc100c1e8146be896568d164d1e, type: 3}
   developerCredits:
+  - Chris A-L
   - Eva Blinova
   - Gil Carter
-  - Sile Keenan
-  - Shaun Parker
-  - Sydney Smith
   - Kathleen Hutten
-  - Chris A-L
+  - Shaun Parker
+  - Sile Keenan
+  - Sydney Smith
   licensedWorksCredits: []

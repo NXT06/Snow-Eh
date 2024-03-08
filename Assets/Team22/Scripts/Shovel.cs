@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using team22;
 using UnityEngine.Audio;
-using UnityEngine.Playables;
 
 namespace team22 {
     public class Shovel : MicrogameInputEvents

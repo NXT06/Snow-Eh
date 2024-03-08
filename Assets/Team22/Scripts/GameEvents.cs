@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using team22;
-using UnityEngine.InputSystem.iOS;
-using UnityEditor.ShortcutManagement;
 
 namespace team22
 {
@@ -90,7 +88,6 @@ namespace team22
             if (whistleBool && played == false)
             {
                 AudioSource.PlayClipAtPoint(whistle, transform.position, 10f);
-                Debug.Log("WHISTLEEEE");
                 whistleBool = false;
                 played = true;
             }

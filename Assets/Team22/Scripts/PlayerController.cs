@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using team22;
-using UnityEngine.InputSystem.iOS;
 using UnityEngine.InputSystem;
-using System.Threading;
 
 namespace team22
 {
