@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d24fbde2c24ab1544bd81b52842e8ec5, type: 3}
-  m_Name: T22-Snow-Eh
+  m_Name: T22_Snow-Eh
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
   teamNumber: 22
@@ -39,7 +39,7 @@ MonoBehaviour:
   - Anyone up for some Timmies?
   - Your neighbor will remember this.
   - Maybe a snow blower would've been helpful...
-  bannerImage: {fileID: 21300000, guid: ad42685f164c5f242b5f1e25681318ba, type: 3}
+  bannerImage: {fileID: 21300000, guid: e5a0c69756d858b4285352605c3f33f8, type: 3}
   developerCredits:
   - Eva Blinova
   - Gil Carter
