@@ -14,6 +14,8 @@ namespace team22
         void Start()
         {
             slider.maxValue = 2;
+            Counter.snowPercent = 360;
+            Counter2.snowPercent2 = 360;
         }
 
         // Update is called once per frame
