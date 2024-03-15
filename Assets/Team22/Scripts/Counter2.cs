@@ -24,7 +24,19 @@ namespace team22
             }
 
         }
-      
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Tag3"))
+            {
+                snowPercent2 -= 2;
+            }
+            if (collision.gameObject.CompareTag("Tag4"))
+            {
+                snowPercent2--;
+            }
+
+        }
+
 
 
 
